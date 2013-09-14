@@ -31,7 +31,7 @@ import com.hp.hpl.jena.update.UpdateRequest;
 public class FusekiConnectionTest {
 	
 	private static final String DS="ds";
-	private static final String HOST="http://192.168.0.125";
+	private static final String HOST="http://192.168.0.14";
 	private static final String PORT="3030";
 	private static final String NAME="connectorname";
 	private static final String DEFAULTGRAPH="<http://default/graph>";
@@ -109,8 +109,8 @@ public class FusekiConnectionTest {
 		
 		testCreateConnection();
 		String insert ="PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>"
-				+ "insert data { graph <http://test/junit/query/1> "
-						+ "{<http://test/junit/queryRes> 	<http://test/junit/queryProp> \"queryResult1\"^^xsd:string.}}";
+				+ "insert data { graph <http://test/junit/query> "
+						+ "{<http://test/junit/queryRes> 	<http://test/junit/queryProp> \"queryResult1\".}}";
 		
 		String test ="select ?x ?y ?z where "
 				+ "{ graph <http://test/junit/query> "
@@ -118,7 +118,8 @@ public class FusekiConnectionTest {
 					+ "filter(?x = <http://test/junit/queryRes> )}}";
 		
 		String delete="PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>"
-				+"delete data { graph <http://test/junit/query/1> {<http://test/junit/queryRes> <http://test/junit/queryProp> \"queryResult1\"^^xsd:string.}}";
+				+"delete data { graph <http://test/junit/query> {<http://test/junit/queryRes> <http://test/junit/queryProp> \"queryResult1\".}}";
+		
 		con.executeUpdateQuery(insert, TEST_UPDATE_LOGGER_ID);
 		
 		List<Map<String, Object>> list = con.executeQuery(test, TEST_QUERY_LOGGER_ID);
