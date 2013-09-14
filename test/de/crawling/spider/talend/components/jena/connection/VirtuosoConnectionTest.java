@@ -15,9 +15,9 @@ import org.junit.Test;
 public class VirtuosoConnectionTest {
 	
 	private static final String USER="dba";
-	private static final String PASSWORD="ZqvX71#5";
-	private static final String HOST="http://localhost/";
-	private static final String PORT="1112";
+	private static final String PASSWORD="dba";
+	private static final String HOST="http://192.168.0.14/";
+	private static final String PORT="1111";
 	private static final String NAME="connectorname";
 	private static final String DEFAULTGRAPH="<http://default/graph>";
 	private static final String TEST_CONNECTION_LOGGER_ID="TestConnectionLogger";
