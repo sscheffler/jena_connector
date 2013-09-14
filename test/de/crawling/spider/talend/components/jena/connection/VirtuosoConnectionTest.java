@@ -1,11 +1,6 @@
 package de.crawling.spider.talend.components.jena.connection;
 
-import static org.easymock.EasyMock.createNiceMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
 
 import java.util.List;
 import java.util.Map;
@@ -73,9 +68,9 @@ public class VirtuosoConnectionTest {
 	@Test
 	public void testExecuteQuery() {
 		
-		String typedQueryTestString="PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX purl: <http://purl.org/ontology/bibo/Document> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX dnb: <http://d-nb.info/> PREFIX dcterms: <http://purl.org/dc/terms/>select *{graph ?graph{?bsb owl:sameAs ?dnb.?bsb dcterms:title ?title.?bsb dc:subject ?subject}filter(?graph=<http://l3kat.avantgarde-labs.de>)filter regex(?dnb, \"http://d-nb.info\")}limit 10";
+//		String typedQueryTestString="PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX purl: <http://purl.org/ontology/bibo/Document> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX dnb: <http://d-nb.info/> PREFIX dcterms: <http://purl.org/dc/terms/>select *{graph ?graph{?bsb owl:sameAs ?dnb.?bsb dcterms:title ?title.?bsb dc:subject ?subject}filter(?graph=<http://l3kat.avantgarde-labs.de>)filter regex(?dnb, \"http://d-nb.info\")}limit 10";
 		String typedQueryTestString2="PREFIX dc: <http://purl.org/dc/elements/1.1/> select * {graph ?graph{<http://lod.b3kat.de/title/BV000705656>  dc:subject ?subject}filter(?graph=<http://l3kat.avantgarde-labs.de>)}";
-		String normalTestString="select * where { graph <http://test/junit/query> {?x ?y ?z}}";
+//		String normalTestString="select * where { graph <http://test/junit/query> {?x ?y ?z}}";
 		List<Map<String, Object>> set = con.executeQuery(typedQueryTestString2, TEST_QUERY_LOGGER_ID);
 		assertNotNull("ResultSet is 'null'",set);
 	}

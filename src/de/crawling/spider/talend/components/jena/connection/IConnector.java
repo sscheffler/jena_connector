@@ -2,8 +2,6 @@ package de.crawling.spider.talend.components.jena.connection;
 
 import java.util.Map;
 
-import com.hp.hpl.jena.graph.Node;
-import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.shared.PrefixMapping;
 
 public interface IConnector {

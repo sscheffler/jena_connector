@@ -3,17 +3,9 @@ package de.crawling.spider.talend.components.jena.connection;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.jena.fuseki.DatasetAccessor;
-import org.apache.jena.fuseki.DatasetAccessorFactory;
-import org.apache.jena.fuseki.http.DatasetGraphAccessor;
-import org.apache.jena.fuseki.http.DatasetGraphAccessorHTTP;
-import org.apache.jena.fuseki.server.SPARQLServer;
-import org.apache.jena.fuseki.server.ServerConfig;
 import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 
 import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.ResultSet;
