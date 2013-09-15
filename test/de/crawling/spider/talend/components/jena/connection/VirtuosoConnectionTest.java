@@ -1,6 +1,6 @@
 package de.crawling.spider.talend.components.jena.connection;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import java.util.List;
 import java.util.Map;
@@ -75,7 +75,7 @@ public class VirtuosoConnectionTest {
 		assertNotNull("ResultSet is 'null'",set);
 	}
 
-	/*@Test
+	@Test
 	public void testExecuteUpdateQuery() {
 		String insert ="PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>"
 				+ "insert data { graph <http://test/junit/query> "
@@ -114,6 +114,6 @@ public class VirtuosoConnectionTest {
 		
 		con.executeUpdateQuery(delete, TEST_UPDATE_LOGGER_ID);
 		
-	}*/
+	}
 
 }
